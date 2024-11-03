@@ -1,0 +1,122 @@
+[
+    {
+        "product_id": 1,
+        "product_title": "Dell Inspiron 15",
+        "product_image": "https://i.ibb.co.com/fkfFq06/Dell-Inspiron-15.jpg",
+        "category": "Laptops",
+        "price": 500,
+        "description": "Dell Inspiron 15 with Intel Core i5, 8GB RAM, 256GB SSD.",
+        "Specification": ["Intel Core i5", "8GB RAM", "256GB SSD", "15.6-inch display"],
+        "availability": true,
+        "rating": 4.5,
+        "warranty": "1 year"
+    },
+    {
+        "product_id": 2,
+        "product_title": "HP Pavilion x360",
+        "product_image": "https://i.ibb.co.com/9Vk03g1/HP-Pavilion-x360.png",
+        "category": "Laptops",
+        "price": 650,
+        "description": "HP Pavilion x360 with Intel Core i7, 16GB RAM, 512GB SSD.",
+        "Specification": ["Intel Core i7", "16GB RAM", "512GB SSD", "14-inch touchscreen"],
+        "availability": false,
+        "rating": 4.6,
+        "warranty": "1 year"
+    },
+    {
+        "product_id": 3,
+        "product_title": "Lenovo ThinkPad E15",
+        "product_image": "https://i.ibb.co.com/7CdD87c/Lenovo-Think-Pad-E15.jpg",
+        "category": "Laptops",
+        "price": 750,
+        "description": "Lenovo ThinkPad E15 with Intel Core i5, 8GB RAM, 256GB SSD.",
+        "Specification": ["Intel Core i5", "8GB RAM", "256GB SSD", "15.6-inch display"],
+        "availability": true,
+        "rating": 4.3,
+        "warranty": "2 years"
+    },
+    {
+        "product_id": 4,
+        "product_title": "Apple MacBook Air M1",
+        "product_image": "https://i.ibb.co.com/m5TFq53/Apple-Mac-Book-Air-M1.webp",
+        "category": "Laptops",
+        "price": 999,
+        "description": "Apple MacBook Air with M1 chip, 8GB RAM, 256GB SSD.",
+        "Specification": ["Apple M1 chip", "8GB RAM", "256GB SSD", "13.3-inch Retina display"],
+        "availability": true,
+        "rating": 4.8,
+        "warranty": "1 year"
+    },
+    {
+        "product_id": 5,
+        "product_title": "Acer Aspire 5",
+        "product_image": "https://i.ibb.co.com/ZzbM3Ns/Acer-Aspire-5.jpg",
+        "category": "Laptops",
+        "price": 550,
+        "description": "Acer Aspire 5 with AMD Ryzen 5, 8GB RAM, 512GB SSD.",
+        "Specification": ["AMD Ryzen 5", "8GB RAM", "512GB SSD", "15.6-inch display"],
+        "availability": false,
+        "rating": 4.4,
+        "warranty": "1 year"
+    },
+    {
+        "product_id": 6,
+        "product_title": "Asus VivoBook 15",
+        "product_image": "https://i.ibb.co.com/z7HV8bt/Asus-Vivo-Book-15.jpg",
+        "category": "Laptops",
+        "price": 480,
+        "description": "Asus VivoBook 15 with Intel Core i3, 4GB RAM, 128GB SSD.",
+        "Specification": ["Intel Core i3", "4GB RAM", "128GB SSD", "15.6-inch display"],
+        "availability": true,
+        "rating": 4.1,
+        "warranty": "6 months"
+    },
+    {
+        "product_id": 7,
+        "product_title": "Wireless Mouse",
+        "product_image": "https://i.ibb.co.com/0FpfHGb/Wireless-Mouse.jpg",
+        "category": "Accessories",
+        "price": 60,
+        "description": "Ergonomic wireless mouse with adjustable DPI.",
+        "Specification": ["Ergonomic design", "Adjustable DPI", "2.4GHz wireless"],
+        "availability": true,
+        "rating": 4.2,
+        "color": "Black"
+    },
+    {
+        "product_id": 8,
+        "product_title": "Laptop Cooling Pad",
+        "product_image": "https://i.ibb.co.com/R74vsxx/Laptop-Cooling-Pad.jpg",
+        "category": "Accessories",
+        "price": 75,
+        "description": "Cooling pad for laptops up to 17 inches with adjustable fans.",
+        "Specification": ["Fits up to 17 inches", "Adjustable fans", "LED lights"],
+        "availability": true,
+        "rating": 4.3,
+        "color": "Blue"
+    },
+    {
+        "product_id": 9,
+        "product_title": "Samsung Galaxy Watch 4",
+        "product_image": "https://i.ibb.co.com/R0r3dGG/Samsung-Galaxy-Watch-4.webp",
+        "category": "Smart Watches",
+        "price": 250,
+        "description": "Samsung Galaxy Watch 4 with health tracking features.",
+        "Specification": ["Health tracking", "Sleep monitoring", "GPS", "Wear OS"],
+        "availability": false,
+        "rating": 4.7,
+        "warranty": "1 year"
+    },
+    {
+        "product_id": 10,
+        "product_title": "Apple Watch SE",
+        "product_image": "https://i.ibb.co.com/fqxBvMQ/Apple-Watch-SE.jpg",
+        "category": "Smart Watches",
+        "price": 280,
+        "description": "Apple Watch SE with Retina display and fitness tracking.",
+        "Specification": ["Retina display", "Fitness tracking", "GPS", "watchOS"],
+        "availability": true,
+        "rating": 4.6,
+        "warranty": "1 year"
+    }
+]
