@@ -5,7 +5,7 @@ import FooterSection from './FooterSection/FooterSection';
 
 const Root = () => {
     return (
-        <div>
+        <div className='p-6'>
            <NavBar></NavBar>
            <Outlet></Outlet>
            <FooterSection></FooterSection>

@@ -33,10 +33,10 @@ const NavBar = () => {
         {navItem}
       </ul>
     </div>
-    <h1 className="text-2xl font-bold">Gadget Heaven</h1>
+    <h1 className="text-2xl font-bold text-black">Gadget Heaven</h1>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1 gap-6">
+    <ul className="menu menu-horizontal px-1 gap-6 text-black">
       {navItem}
     </ul>
   </div>

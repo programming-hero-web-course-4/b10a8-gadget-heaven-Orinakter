@@ -3,15 +3,15 @@ import React from 'react';
 const FooterSection = () => {
     return (
        
-            <footer className="bg-gray-100 py-10 ">
+            <footer className="bg-gray-100 mt-52 p-4 md:p-10">
         <div className="container mx-auto text-center">
-          {/* Main Title and Description */}
+          {/* Title  */}
           <div className="mb-8">
             <h2 className="text-2xl font-bold">Gadget Heaven</h2>
             <p className="text-gray-600 mt-3">Leading the way in cutting-edge technology and innovation.</p>
           </div>
           <br />
-          <hr />
+          <hr className='mx-auto' />
   
           {/* Footer Links */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-5">
@@ -37,6 +37,7 @@ const FooterSection = () => {
             </div>
   
             {/* Legal */}
+            
             <div>
               <h3 className="font-semibold text-lg mb-4">Legal</h3>
               <ul className="space-y-2 text-gray-600">
@@ -50,6 +51,7 @@ const FooterSection = () => {
       </footer>
        
     );
+
 };
 
 export default FooterSection;

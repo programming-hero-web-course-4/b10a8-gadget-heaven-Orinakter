@@ -1,9 +1,10 @@
 import React from 'react';
+import BannerSection from '../BannerSection/BannerSection';
 
 const HomeSection = () => {
     return (
         <div>
-            <h1>Home</h1>
+            <BannerSection></BannerSection>
         </div>
     );
 };
