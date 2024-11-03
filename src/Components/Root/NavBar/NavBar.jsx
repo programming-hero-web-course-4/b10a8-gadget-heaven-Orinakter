@@ -33,10 +33,10 @@ const NavBar = () => {
         {navItem}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">Gadget Heaven</a>
+    <h1 className="text-2xl font-bold">Gadget Heaven</h1>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
+    <ul className="menu menu-horizontal px-1 gap-6">
       {navItem}
     </ul>
   </div>

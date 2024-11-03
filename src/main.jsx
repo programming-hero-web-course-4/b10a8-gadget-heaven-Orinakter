@@ -14,6 +14,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import FooterSection from './Components/Root/FooterSection/FooterSection.jsx'
 
 
 const router = createBrowserRouter([
@@ -26,10 +27,12 @@ const router = createBrowserRouter([
         path: "/",
         element:<HomeSection></HomeSection>,
       },
-      // {
-      //   path: "/footer",
-      //   element:<FooterSection></FooterSection>,
-      // },
+
+      {
+        path: "/footer",
+        element:<FooterSection></FooterSection>,
+      },
+      
     ],
     
     
