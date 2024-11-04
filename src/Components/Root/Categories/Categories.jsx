@@ -7,7 +7,7 @@ const Categories = ({categoryData}) => {
     return (
         <div className="w-3/12 mt-80 p-12 shadow-xl">
             {
-                categoryData.map(item=><Category item={item} kry={item.product_id}></Category>)
+                categoryData.map(item=><Category item={item} key={item.product_id}></Category>)
             }
             
         </div>

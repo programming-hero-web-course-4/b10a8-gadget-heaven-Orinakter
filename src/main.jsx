@@ -4,6 +4,8 @@ import App from './App.jsx'
 import Root from './Components/Root/Root.jsx'
 import ErrorPage from './Components/Root/ErrorPage/ErrorPage.jsx'
 import HomeSection from './Components/Root/HomeSection/HomeSection.jsx'
+import FooterSection from './Components/Root/FooterSection/FooterSection.jsx'
+import ViewDetails from './Components/Root/ViewDetails/ViewDetails.jsx'
 
 
 import './index.css'
@@ -14,7 +16,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import FooterSection from './Components/Root/FooterSection/FooterSection.jsx'
+
 
 
 const router = createBrowserRouter([
@@ -32,6 +34,12 @@ const router = createBrowserRouter([
       {
         path: "/footer",
         element:<FooterSection></FooterSection>,
+      },
+
+      {
+        path: "/viewdetails/:product_id",
+        element:<ViewDetails></ViewDetails>,
+        loader:()=>fetch('./gadgetsData.json')
       },
       
     ],
