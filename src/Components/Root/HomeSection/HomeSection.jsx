@@ -1,18 +1,48 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import BannerSection from '../BannerSection/BannerSection';
 import Gadgets from '../Gadgets/Gadgets';
 import Categories from '../Categories/Categories';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 
 const HomeSection = () => {
+    const [categoryName,setCategoryName] = useState("")
     const categoryData = useLoaderData();
+    const [allProduct,setProduct] = useState([])
+    useEffect(()=>{
+        fetch('../gadgetsData.json')
+        .then(res=>res.json())
+        .then(data=>{
+            if(categoryName===""){
+                setProduct(data)
+            }
+            else{
+                const filterProduct = data.filter(product=>product.category===categoryName)
+        setProduct(filterProduct);
+
+            }
+        })
+        
+
+    },[categoryName])
+
+    const categoryController =(id)=>{
+        setCategoryName(id)
+
+    }
+
+    const allProductBtn =()=>{
+        setCategoryName("")
+    }
+    
     
     return (
         <div>
             <BannerSection></BannerSection>
             <div className="flex">
-            <Categories categoryData={categoryData}></Categories>
-            <Gadgets></Gadgets>
+            
+            <Categories categoryData={categoryData} categoryController={categoryController} allProductBtn={allProductBtn}></Categories>
+            
+            <Gadgets allProduct={allProduct}></Gadgets>
             </div>
         </div>
     );

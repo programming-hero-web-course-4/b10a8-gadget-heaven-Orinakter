@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element:<HomeSection></HomeSection>,
-        loader:()=>fetch('/categoryData.json')
+        loader:()=>fetch('../categoryData.json')
       },
 
       {

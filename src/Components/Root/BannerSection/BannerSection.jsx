@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const BannerSection = () => {
@@ -14,7 +15,7 @@ const BannerSection = () => {
       <p className="py-6">
       Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
       </p>
-      <button className="btn text-purple-600 rounded-full w-[150px] font-bold">Shop Now</button>
+      <Link to="/dashboard"><button className="btn text-purple-600 rounded-full w-[150px] font-bold">Shop Now</button></Link>
     </div>
   </div>
 </div>

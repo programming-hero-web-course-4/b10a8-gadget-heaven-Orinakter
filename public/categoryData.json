@@ -5,14 +5,14 @@
     },
     {
         "product_id": 2,
-        "category": "MacBook"
+        "category": "Accessories"
     },
     {
         "product_id": 3,
-        "category": "iPhone"
+        "category": "Smart Watches"
     },
     {
         "product_id": 4,
-        "category": "Accessories"
+        "category": "Macbook"
     }
 ]
