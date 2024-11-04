@@ -1,16 +1,20 @@
 import { NavLink } from "react-router-dom";
 import { CiShoppingCart } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
+import { useContext } from "react";
+import { navContext } from "../Root";
 
 
 const NavBar = () => {
+  const location = useContext(navContext);
+
     const navItem =<>
     <NavLink to="/"><li>Home</li></NavLink>
     <NavLink to="/statistics"><li>Statistics</li></NavLink>
     <NavLink to="/dashboard"><li>Dashboard</li></NavLink>
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -36,7 +40,7 @@ const NavBar = () => {
     <h1 className="text-2xl font-bold text-black">Gadget Heaven</h1>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1 gap-6 text-black">
+    <ul className={`menu menu-horizontal px-1 gap-6 ${location==="/" ? "text-white":"text-black"}`}>
       {navItem}
     </ul>
   </div>
