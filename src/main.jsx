@@ -8,6 +8,8 @@ import ViewDetails from './Components/Root/ViewDetails/ViewDetails.jsx'
 import Statistics from './Components/Root/Statistics/Statistics.jsx'
 import Dashboard from './Components/Root/Dashboard/Dashboard.jsx'
 import CustomersFeedBack from './Components/Root/CustomersFeedBack/CustomersFeedBack.jsx'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -44,6 +46,7 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element:<Dashboard></Dashboard>,
+       
         
       },
 
@@ -57,7 +60,7 @@ const router = createBrowserRouter([
       {
         path: "/viewdetails/:product_id",
         element:<ViewDetails></ViewDetails>,
-        loader:()=>fetch('./gadgetsData.json')
+        loader:()=>fetch('../gadgetsData.json')
       },
       
     ],
@@ -69,5 +72,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer />
   </StrictMode>,
 )

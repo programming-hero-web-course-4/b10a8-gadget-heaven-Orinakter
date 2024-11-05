@@ -2,13 +2,20 @@ import React from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { CiShoppingCart } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
+import { setcartItem } from '../../../LocalStorage/localstorage';
 
 const ViewDetails = () => {
     const {product_id}= useParams();
     const viewData = useLoaderData();
+
     const parseNumber = parseInt(product_id);
     const viewItem = viewData.find(item => item.product_id == parseNumber)
     const {product_image,product_title,price,description,Specification,rating,warranty} = viewItem
+
+    const addToCardBtn =(viewItem)=>{
+        setcartItem(viewItem)
+
+    }
     return (
 
         <div className=''>
@@ -67,7 +74,7 @@ const ViewDetails = () => {
 
                 <div className="flex gap-6 items-center mt-4">
                     <div className="">
-                    <button className='btn bg-purple-700 text-white rounded-full w-[190px]'>Add To Card <p><CiShoppingCart className='text-2xl' /></p></button>
+                    <button onClick={()=>addToCardBtn(viewItem)} className='btn bg-purple-700 text-white rounded-full w-[190px]'>Add To Card <p><CiShoppingCart className='text-2xl' /></p></button>
                     </div>
                     <div className="">
                         <button className='btn rounded-full bg-white'><CiHeart className='text-2xl' /></button>
