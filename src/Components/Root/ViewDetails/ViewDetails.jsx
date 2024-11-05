@@ -12,6 +12,20 @@ const ViewDetails = () => {
     return (
 
         <div className=''>
+            <div className="">
+            <div className="hero bg-purple-600 p-12">
+  <div className="hero-content text-center">
+    <div className="max-w-md">
+      <h1 className="text-5xl font-bold text-white">Product Details</h1>
+      <p className="py-6 text-white">
+      Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
+      
+    </div>
+  </div>
+</div>
+
+          </div>
+
             <div className="flex gap-32">
             <div className="mt-12">
             <img src={product_image} alt="" className='w-[430px] h-[500px] rounded-xl' />
@@ -23,11 +37,16 @@ const ViewDetails = () => {
                 <p className='mt-3 '>{description}</p>
                 <div className="mt-3">
                 <span className='text-xl font-bold '>Specification:</span>
-                    {
-                        Specification.map(Specification=><ul className='list-decimal mt-3'>
-                            <li> {Specification}</li>
-                            </ul>)
+                <ul className='list-decimal ml-4 mt-3'>
+                {
+                        Specification.map((Specification,id)=>(
+                            <li key={id}>{Specification}</li>
+
+                        ))
                     }
+                            
+                            </ul>
+                    
                 </div>
                 <p className='mt-3 text-xl font-bold'>Rating:</p>
                 <p className='mt-3'>{rating}</p>

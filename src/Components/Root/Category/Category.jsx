@@ -17,7 +17,7 @@ const Category = ({categoryController,categoryData}) => {
         <div className='py-4  ' >
             {
                 categoryData.map(item=>(
-                    <button onClick={()=>{categoryController(item.category),btnStatusHandler(item.product_id)}}  className={`w-[200px] h-[50px] rounded-full my-4 ${item.product_id=== productId? "bg-purple-300": "bg-gray-200"}`}>{item.category}</button>
+                    <button key={item.product_id} onClick={()=>{categoryController(item.category),btnStatusHandler(item.product_id)}}  className={`w-[200px] h-[50px] rounded-full my-4 ${item.product_id=== productId? "bg-purple-300": "bg-gray-200"}`}>{item.category}</button>
 
                 ))
             }

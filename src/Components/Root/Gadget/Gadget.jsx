@@ -9,7 +9,7 @@ const Gadget = ({item}) => {
             <h1 className="font-bold text-2xl mt-4">{product_title}</h1>
             <p className="text-xl mt-2">Price: {price}</p>
             
-            <button className="btn text-purple-600 rounded-full border-purple-600 font-bold mt-4 w-[155px]">View Details</button>
+            <Link to={`/viewdetails/${product_id}`}><button className="btn text-purple-600 rounded-full border-purple-600 font-bold mt-4 w-[155px]">View Details</button></Link>
         </div>
     );
 };
