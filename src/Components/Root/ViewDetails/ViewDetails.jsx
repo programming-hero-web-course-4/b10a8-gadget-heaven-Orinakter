@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import { CiShoppingCart } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { setcartItem } from '../../../LocalStorage/localstorage';
+import { setWishItem } from '../../../LocalStorage/localstoragewish';
 
 const ViewDetails = () => {
     const {product_id}= useParams();
@@ -15,6 +16,11 @@ const ViewDetails = () => {
     const addToCardBtn =(viewItem)=>{
         setcartItem(viewItem)
 
+    }
+
+    const addToWishBtn =(viewItem)=>{
+
+        setWishItem(viewItem)
     }
     return (
 
@@ -77,7 +83,7 @@ const ViewDetails = () => {
                     <button onClick={()=>addToCardBtn(viewItem)} className='btn bg-purple-700 text-white rounded-full w-[190px]'>Add To Card <p><CiShoppingCart className='text-2xl' /></p></button>
                     </div>
                     <div className="">
-                        <button className='btn rounded-full bg-white'><CiHeart className='text-2xl' /></button>
+                        <button onClick={()=>addToWishBtn(viewItem)} className='btn rounded-full bg-white'><CiHeart className='text-2xl' /></button>
 
                     </div>
                 </div>
