@@ -3,6 +3,8 @@ import { CiShoppingCart } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { useContext } from "react";
 import { navContext } from "../Root";
+import { getCartToLS } from "../../../LocalStorage/localstorage";
+import { getWishToLS } from "../../../LocalStorage/localstoragewish";
 
 
 const NavBar = () => {
@@ -14,6 +16,9 @@ const NavBar = () => {
     <NavLink to="/dashboard"><li>Dashboard</li></NavLink>
     <NavLink to="/customerfeedback"><li>Reviews</li></NavLink>
     </>
+
+    const cart = getCartToLS();
+    const wish = getWishToLS()
     return (
         <div className="navbar">
   <div className="navbar-start">
@@ -46,8 +51,15 @@ const NavBar = () => {
     </ul>
   </div>
   <div className="navbar-end flex gap-3">
-   <button className="bg-white"><CiShoppingCart /></button>
-   <button className="bg-white"><CiHeart /></button>
+  <div className="relative">
+  <button className="bg-white text-2xl"><CiShoppingCart /></button>
+  <span className="text-red-400 absolute -top-6 right-0">{cart.length}</span>
+  </div>
+   <div className="relative">
+   <button className="bg-white  text-2xl"><CiHeart /></button>
+   <span className="text-red-400 absolute -top-6 right-0">{wish.length}</span>
+   
+   </div>
   </div>
 </div>
     );

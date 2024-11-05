@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getCartToLS, removeEachCardItem } from '../../../LocalStorage/localstorage';
 import { RxCrossCircled } from "react-icons/rx";
 import { getWishToLS, removeEachWishItem } from '../../../LocalStorage/localstoragewish';
+import { BiSort } from "react-icons/bi";
 
 const Dashboard = () => {
   const [cartData,setCartData] =useState([]);
@@ -35,6 +36,12 @@ const Dashboard = () => {
 
   }
 
+  const cartSortBtnControl = ()=>{
+    const sortedCartData = [...cartData].sort((x,y)=>y.price-x.price)
+    setCartData(sortedCartData)
+
+  }
+
 
   
 
@@ -48,10 +55,21 @@ const Dashboard = () => {
       A gadget website dashboard should provide a user-friendly interface showcasing key metrics: sales, product stock levels, order history, and customer analytics. Real-time updates, visual charts, and easy navigation help track performance and manage inventory efficiently
       </p>
       <div className="flex justify-center items-center gap-4">
-        <button onClick={()=>setButtonType("cart")} className='btn text-purple-600 font-bold bg-white rounded-full w-[170px] h-[50px]'>Cart</button>
-        <button onClick={()=>setButtonType("wish")} className='btn bg-purple-600 text-white border-white w-[170px] h-[50px] rounded-full '>Wishlist</button>
+        <button onClick={()=>setButtonType("cart")} className={`btn  font-bold ${buttontype=== "cart"? "bg-white text-black":"bg-purple-300"} rounded-full w-[170px] h-[50px]`}>Cart</button>
+        <button onClick={()=>setButtonType("wish")} className={`btn  ${buttontype=== "wish"? "bg-white text-black":"bg-purple-300"} border-white w-[170px] h-[50px] rounded-full `}>Wishlist</button>
       </div>
     </div>
+  </div>
+</div>
+
+<div className="p-10 flex justify-between ">
+  <div className="">
+    <h1>Cart</h1>
+  </div>
+  <div className="flex justify-center items-center gap-4">
+    <h1>Total Cost</h1>
+    <button onClick={cartSortBtnControl} className='btn '>Sort by Price<span><BiSort /></span></button>
+    <button className='btn bg-purple-600 text-white'>Purchase</button>
   </div>
 </div>
 
