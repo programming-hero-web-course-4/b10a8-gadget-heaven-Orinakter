@@ -7,10 +7,15 @@ import { BiSort } from "react-icons/bi";
 const Dashboard = () => {
   const [cartData,setCartData] =useState([]);
   const [wishData,setWishData] =useState([]);
+  const [cartPrice,setCartPrice] =useState(0);
   const [buttontype,setButtonType] =useState("cart")
   useEffect(()=>{
     const lsCartData = getCartToLS();
     setCartData(lsCartData);
+    const totalPrice = lsCartData.reduce((x,y)=>x+y.price,0)
+    setCartPrice(totalPrice)
+
+
 
   },[])
 
@@ -26,7 +31,12 @@ const Dashboard = () => {
    const reminingCartData = cartData.filter(item=>item.product_id !== cart.product_id)
    setCartData(reminingCartData);
 
+   const totalPrice = reminingCartData.reduce((x,y)=>x+y.price,0)
+    setCartPrice(totalPrice)
+
   }
+
+
 
 
   const wishRemoveBtnControl = (wish)=>{
@@ -67,7 +77,7 @@ const Dashboard = () => {
     <h1>Cart</h1>
   </div>
   <div className="flex justify-center items-center gap-4">
-    <h1>Total Cost</h1>
+    <h1>Total Cost: {cartPrice}</h1>
     <button onClick={cartSortBtnControl} className='btn '>Sort by Price<span><BiSort /></span></button>
     <button className='btn bg-purple-600 text-white'>Purchase</button>
   </div>
