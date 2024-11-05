@@ -5,6 +5,9 @@ import App from './App.jsx'
 import ErrorPage from './Components/Root/ErrorPage/ErrorPage.jsx'
 import HomeSection from './Components/Root/HomeSection/HomeSection.jsx'
 import ViewDetails from './Components/Root/ViewDetails/ViewDetails.jsx'
+import Statistics from './Components/Root/Statistics/Statistics.jsx'
+import Dashboard from './Components/Root/Dashboard/Dashboard.jsx'
+import CustomersFeedBack from './Components/Root/CustomersFeedBack/CustomersFeedBack.jsx'
 
 
 
@@ -16,8 +19,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Statistics from './Components/Root/Statistics/Statistics.jsx'
-import Dashboard from './Components/Root/Dashboard/Dashboard.jsx'
+
 
 
 
@@ -45,7 +47,13 @@ const router = createBrowserRouter([
         
       },
 
-     
+      {
+        path: "/customerfeedback",
+        element:<CustomersFeedBack></CustomersFeedBack>,
+        
+      },
+
+    
       {
         path: "/viewdetails/:product_id",
         element:<ViewDetails></ViewDetails>,

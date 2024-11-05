@@ -9,9 +9,7 @@ const Categories = ({categoryData,categoryController,allProductBtn}) => {
               <button onClick={allProductBtn} className='btn text-purple-600  w-[200px] h-[50px] rounded-full'>All Product</button>
 
               <div className="">
-            {
-                categoryData.map(item=><Category  categoryController={categoryController} item={item} key={item.product_id}></Category>)
-            }
+              <Category  categoryController={categoryController} categoryData={categoryData}></Category>
             
         </div>
         </div>
