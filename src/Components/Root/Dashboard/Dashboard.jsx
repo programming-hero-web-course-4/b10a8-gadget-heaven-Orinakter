@@ -74,12 +74,12 @@ const Dashboard = () => {
 
 <div className="p-10 flex justify-between ">
   <div className="">
-    <h1>Cart</h1>
+    <h1 className='text-2xl font-bold'>Cart</h1>
   </div>
   <div className="flex justify-center items-center gap-4">
-    <h1>Total Cost: {cartPrice}</h1>
-    <button onClick={cartSortBtnControl} className='btn '>Sort by Price<span><BiSort /></span></button>
-    <button className='btn bg-purple-600 text-white'>Purchase</button>
+    <h1 className='text-2xl font-bold'>Total Cost: {cartPrice}</h1>
+    <button onClick={cartSortBtnControl} className='btn text-purple-600 font-bold border-purple-600 rounded-full  '>Sort by Price<span><BiSort /></span></button>
+    <button className='btn bg-purple-600 text-white rounded-full w-[120px] '>Purchase</button>
   </div>
 </div>
 
@@ -90,13 +90,13 @@ const Dashboard = () => {
       <div key={cart.product_id} className="border-2 p-4 bg-gray-100 rounded-xl flex
       gap-12 relative">
         <div className="">
-          <img src={cart.product_image} alt="" className='w-48 h-32' />
+          <img src={cart.product_image} alt="" className='w-48 h-32 rounded-xl' />
 
         </div>
         <div className="">
           <h1 className='text-2xl font-bold '>{cart.product_title}</h1>
-          <p className='text-xl mt-2'>{cart.description}</p>
-          <p>Price: $ {cart.price}</p>
+          <p className='text-xl mt-2 text-gray-500'>{cart.description}</p>
+          <p className='mt-2 font-semibold'>Price: $ {cart.price}</p>
 
         </div>
         <div className="absolute top-0 right-0">

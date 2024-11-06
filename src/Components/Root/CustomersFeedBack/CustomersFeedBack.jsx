@@ -14,7 +14,7 @@ const CustomersFeedBack = () => {
             <p className="py-6">
             Fantastic experience shopping here.Great selection of laptops, phones, and accessories at competitive prices. Customer service was friendly and knowledgeable, helping me find exactly what I needed. Highly recommended for tech needs.
             </p>
-            <button className="btn bg-purple-600 text-white">Get Started</button>
+            <button className="btn bg-purple-600 text-white">Learn More</button>
           </div>
         </div>
       </div>
@@ -77,8 +77,8 @@ const CustomersFeedBack = () => {
 </div>
     </div>
     <div className="text-left">
-        <h4 className='font-semibold mb-3'><span className='font-bold'>Model:</span> Apple Watch Series 9</h4>
-        <p>The Apple Watch Series 9 is fantastic! I love the new health features, especially the blood oxygen and ECG tracking. It’s like having a personal health monitor on my wrist. Battery life could be longer, but the fast charging makes up for it. Highly recommended for Apple users</p>
+        <h4 className='font-semibold mb-3'><span className='font-bold'>Model : </span>  Apple Watch Series 9</h4>
+        <p className='text-gray-500'>The Apple Watch Series 9 is fantastic! I love the new health features, especially the blood oxygen and ECG tracking. It’s like having a personal health monitor on my wrist. Battery life could be longer, but the fast charging makes up for it. Highly recommended for Apple users</p>
     </div>
     
   </div>
@@ -112,8 +112,8 @@ const CustomersFeedBack = () => {
 </div>
     </div>
     <div className="text-left">
-        <h4  className='font-semibold mb-3'><span className='font-bold'>Model:</span> Lenovo ThinkPad X1 Carbon</h4>
-        <p>The ThinkPad X1 Carbon is a powerhouse! It’s super fast and the build quality is excellent. I love the keyboard for typing long documents. The only drawback is that it’s a bit pricey, but you definitely get what you pay for.</p>
+        <h4  className='font-semibold mb-3'><span className='font-bold'>Model :</span>  Lenovo ThinkPad X1 Carbon</h4>
+        <p className='text-gray-500'>The ThinkPad X1 Carbon is a powerhouse! It’s super fast and the build quality is excellent. I love the keyboard for typing long documents. The only drawback is that it’s a bit pricey, but you definitely get what you pay for.</p>
     </div>
     
   </div>
@@ -147,8 +147,8 @@ const CustomersFeedBack = () => {
 </div>
     </div>
     <div className="text-left">
-        <h4  className='font-semibold mb-3'><span className='font-bold'>Model:</span>iPhone 15 Pro</h4>
-        <p>The camera is phenomenal, especially in low light. I love the dynamic island feature and the smooth performance. The only downside is the price, but the quality speaks for itself.</p>
+        <h4  className='font-semibold mb-3'><span className='font-bold'>Model : </span>  iPhone 15 Pro</h4>
+        <p className='text-gray-500'>The camera is phenomenal, especially in low light. I love the dynamic island feature and the smooth performance. The only downside is the price, but the quality speaks for itself.</p>
     </div>
     
   </div>
