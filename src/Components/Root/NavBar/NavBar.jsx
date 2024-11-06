@@ -43,7 +43,10 @@ const NavBar = () => {
         {navItem}
       </ul>
     </div>
+   <div className="flex justify-center items-center gap-3">
+    <img src="https://i.ibb.co.com/ZzxmJ4R/logo.png" alt="" className="w-10 h-10 rounded-full"/>
     <h1 className="text-2xl font-bold text-black">Gadget Heaven</h1>
+   </div>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className={`menu menu-horizontal px-1 gap-6 ${location==="/" ? "text-white":"text-black"}`}>
