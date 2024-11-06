@@ -10,6 +10,8 @@ const getCartToLS =()=>{
     }
 }
 
+
+
 const setcartItem = (item)=>{
     const objCart = getCartToLS();
     const cartCondition = objCart.find(cart=>cart.product_id === item.product_id )
@@ -41,4 +43,11 @@ const removeEachCardItem = (item)=>{
 
 }
 
-export {getCartToLS,setcartItem,removeEachCardItem}
+
+const removeCartItemLS = ()=>{
+    localStorage.removeItem("cardItem")
+}
+
+
+
+export {getCartToLS,setcartItem,removeEachCardItem,removeCartItemLS}

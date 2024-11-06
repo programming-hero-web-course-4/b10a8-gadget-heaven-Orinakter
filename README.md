@@ -12,6 +12,8 @@
 - Props 
 - React Toastify
 - React Location
+- React icons
+- React Helmet
 
 ## 3 Key features of my project
 

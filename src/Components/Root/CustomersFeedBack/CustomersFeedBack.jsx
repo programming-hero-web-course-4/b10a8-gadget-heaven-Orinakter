@@ -1,9 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 
 const CustomersFeedBack = () => {
     return (
         <div className="">
+          <Helmet>
+          <meta charSet="utf-8" />
+          <title>Reviews</title>
+          </Helmet>
             <div className="hero bg-base-200 min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img

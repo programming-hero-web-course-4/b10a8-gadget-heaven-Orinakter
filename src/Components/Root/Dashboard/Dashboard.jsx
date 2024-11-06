@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { getCartToLS, removeEachCardItem } from '../../../LocalStorage/localstorage';
+import { getCartToLS, removeCartItemLS, removeEachCardItem, setcartItem } from '../../../LocalStorage/localstorage';
 import { RxCrossCircled } from "react-icons/rx";
 import { getWishToLS, removeEachWishItem } from '../../../LocalStorage/localstoragewish';
 import { BiSort } from "react-icons/bi";
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Dashboard = () => {
   const [cartData,setCartData] =useState([]);
@@ -52,11 +54,56 @@ const Dashboard = () => {
 
   }
 
+  const modalCloseBtnController = ()=>{
 
-  
+    setCartPrice(0)
+    setCartData([])
+    removeCartItemLS()
+
+    
+
+
+  }
 
     return (
+
+
         <div className="">
+
+          <Helmet>
+          <meta charSet="utf-8" />
+            <title>Dashboard</title>
+
+          </Helmet>
+
+          
+
+<dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+  <div className="modal-box">
+    <div className="">
+      <div className="flex flex-col justify-center items-center">
+        <img src="https://i.ibb.co.com/fCG17Dk/Group.png" alt="" className='mb-5' />
+        <h3 className='font-bold text-2xl'>Payment Successfully</h3>
+
+        <hr />
+
+        <p className='text-xl text-gray-500 mt-2' >Thanks for purchasing.</p>
+        <p className='text-lg text-gray-500 mt-2'>Total:{cartPrice}</p>
+
+      </div>
+    </div>
+    <div className="modal-action">
+      <form method="dialog">
+      
+        <Link to ="/"><button onClick={modalCloseBtnController} className="btn w-full">Close</button></Link>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+
+
           <div className="hero bg-purple-600 p-12">
   <div className="hero-content text-center">
     <div className="max-w-md">
@@ -74,12 +121,18 @@ const Dashboard = () => {
 
 <div className="p-10 flex justify-between ">
   <div className="">
-    <h1 className='text-2xl font-bold'>Cart</h1>
+   {
+    buttontype === "cart" ?  <h1 className='text-2xl font-bold'>Cart</h1> : 
+    <h1 className='text-2xl font-bold'>Wish-List</h1>
+   }
   </div>
   <div className="flex justify-center items-center gap-4">
-    <h1 className='text-2xl font-bold'>Total Cost: {cartPrice}</h1>
+    <h1 className='text-2xl font-bold'>Total Cost: ${cartPrice}</h1>
     <button onClick={cartSortBtnControl} className='btn text-purple-600 font-bold border-purple-600 rounded-full  '>Sort by Price<span><BiSort /></span></button>
-    <button className='btn bg-purple-600 text-white rounded-full w-[120px] '>Purchase</button>
+    <button 
+    onClick={()=>document.getElementById('my_modal_5').showModal()}
+    disabled = {cartPrice === 0}
+     className='btn bg-purple-600 text-white rounded-full w-[120px] '>Purchase</button>
   </div>
 </div>
 

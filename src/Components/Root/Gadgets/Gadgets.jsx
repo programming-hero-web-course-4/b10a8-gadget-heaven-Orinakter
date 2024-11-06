@@ -16,8 +16,10 @@ const Gadgets = ({allProduct}) => {
                 }
                 </div> : 
                 <div className="p-10 ">
+
+                    <h1 className="text-5xl font-bold text-purple-600 text-center">No Data Found</h1>
                     
-                    <img src="https://i.ibb.co.com/yRBKngd/images.png" alt="" className="mx-auto mt-4 rounded-xl"/>
+   
                 </div>
             }
         </div>

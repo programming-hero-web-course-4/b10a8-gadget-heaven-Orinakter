@@ -8,9 +8,9 @@ const BannerSection = () => {
 
     <div className="relative">
     <div className="hero py-8">
-  <div className="hero-content text-center">
-    <div className="max-w-md mb-20">
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold ">Upgrade Your Tech Accessorize with 
+  <div className="hero-content text-center w-full">
+    <div className="max-w-md mb-20 w-full">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold w-full">Upgrade Your Tech Accessorize with 
          Gadget Heaven Accessories</h1>
       <p className="py-6">
       Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!

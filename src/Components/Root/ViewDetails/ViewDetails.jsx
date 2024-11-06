@@ -4,6 +4,7 @@ import { CiShoppingCart } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { setcartItem } from "../../../LocalStorage/localstorage";
 import { setWishItem } from "../../../LocalStorage/localstoragewish";
+import { Helmet } from "react-helmet";
 
 const ViewDetails = () => {
   const { product_id } = useParams();
@@ -32,9 +33,13 @@ const ViewDetails = () => {
     
       <section className="mb-96 mx-auto">
         {/* product details */}
+        <Helmet>
+        <meta charSet="utf-8" />
+        <title>Home | Details</title>
+        </Helmet>
 
-        <div className="relative">
-          <div className="hero bg-purple-600 ">
+        <div className="relative mb-[600px]">
+          <div className="hero bg-purple-600 pb-56 ">
             <div className="hero-content text-center">
               <div className="max-w-md">
                 <h1 className="text-5xl font-bold text-white">
@@ -50,7 +55,7 @@ const ViewDetails = () => {
           </div>
 
 {/* cart */}
-<div className="flex gap-32 shadow-xl p-12 absolute top-48 bg-white">
+<div className="flex gap-32 shadow-xl p-12 absolute top-48 left-20 bg-white">
           <div className="mt-12 ">
             <img
               src={product_image}

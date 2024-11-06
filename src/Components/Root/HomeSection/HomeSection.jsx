@@ -3,6 +3,7 @@ import BannerSection from '../BannerSection/BannerSection';
 import Gadgets from '../Gadgets/Gadgets';
 import Categories from '../Categories/Categories';
 import { useLoaderData, useParams } from 'react-router-dom';
+import {Helmet} from "react-helmet";
 
 const HomeSection = () => {
     const [categoryName,setCategoryName] = useState("")
@@ -37,6 +38,10 @@ const HomeSection = () => {
     
     return (
         <div>
+            <Helmet>
+            <meta charSet="utf-8" />
+                <title>Home</title>
+            </Helmet>
             <BannerSection></BannerSection>
             <div className="flex">
             
