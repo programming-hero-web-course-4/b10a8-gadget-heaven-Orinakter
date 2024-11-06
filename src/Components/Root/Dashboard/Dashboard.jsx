@@ -129,10 +129,13 @@ const Dashboard = () => {
   <div className="flex justify-center items-center gap-4">
     <h1 className='text-2xl font-bold'>Total Cost: ${cartPrice}</h1>
     <button onClick={cartSortBtnControl} className='btn text-purple-600 font-bold border-purple-600 rounded-full  '>Sort by Price<span><BiSort /></span></button>
-    <button 
-    onClick={()=>document.getElementById('my_modal_5').showModal()}
-    disabled = {cartPrice === 0}
-     className='btn bg-purple-600 text-white rounded-full w-[120px] '>Purchase</button>
+    {
+      buttontype === "cart" ? <button 
+      onClick={()=>document.getElementById('my_modal_5').showModal()}
+      disabled = {cartPrice === 0}
+       className='btn bg-purple-600 text-white rounded-full w-[120px] '>Purchase</button>
+       : ""
+    }
   </div>
 </div>
 
